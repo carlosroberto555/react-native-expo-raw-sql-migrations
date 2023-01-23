@@ -36,6 +36,7 @@ export const MigrationProvider: FC<{
   db: DB;
   migrations: Migration[];
   options?: { startsBootstrap: boolean };
+  children: React.ReactNode;
 }> = ({ children, db, migrations, options }) => {
   const _startsBootstrap = options?.startsBootstrap || true;
 
@@ -54,6 +55,7 @@ export const MigrationBaseProvider: FC<{
   db: DB;
   migrations: Migration[];
   startsBootstrap: boolean;
+  children: React.ReactNode;
 }> = ({ children, db, migrations, startsBootstrap }) => {
   const [isFinished, setIsFinished] = useState<boolean>(false);
 
