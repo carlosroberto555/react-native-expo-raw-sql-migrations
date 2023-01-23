@@ -16,6 +16,11 @@ type Options = {
 
 type DB = WebSQLDatabase;
 
+type MigrationContextValue = {
+  isFinished: boolean;
+  execute?: (db: DB, migrationList: Migration[], options?: Options) => void;
+}
+
 /**
  * Constants
  */
@@ -25,7 +30,7 @@ const DEFAULT_COLUMN_NAME = "versions";
 /**
  * Logics
  */
-const MigrationContext = createContext({
+const MigrationContext = createContext<MigrationContextValue>({
   isFinished: false,
   execute: undefined,
 });
@@ -170,7 +175,7 @@ export const MigrationBaseProvider: FC<{
     });
   };
 
-  const value = { isFinished, execute };
+  const value: MigrationContextValue = { isFinished, execute };
 
   useEffect(() => {
     if (!startsBootstrap) return;
