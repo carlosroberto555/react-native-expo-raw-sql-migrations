@@ -3,7 +3,7 @@
     "build": "yarn run tsc"
   },
   "name": "react-native-expo-raw-sql-migrations",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Migration tool to use raw sql for SQLite / react-nativ expo.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -28,11 +28,11 @@
   "peerDependencies": {
     "expo-sqlite": "^8.1.0",
     "react": "^16.8.1",
-    "typescript": "^3.8.3"
+    "typescript": "^4.6.3"
   },
   "devDependencies": {
     "expo-sqlite": "^8.1.0",
     "react": "^16.8.1",
-    "typescript": "^3.8.3"
+    "typescript": "^4.6.3"
   }
 }
