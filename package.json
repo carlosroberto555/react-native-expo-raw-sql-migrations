@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "build": "yarn run tsc",
-    "postinstall": "yarn run tsc"
+    "build": "tsc",
+    "postinstall": "tsc"
   },
   "name": "react-native-expo-raw-sql-migrations",
   "version": "1.0.1",
